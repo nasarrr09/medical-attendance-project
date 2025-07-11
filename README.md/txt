@@ -1,0 +1,49 @@
+
+📌 Medical Exemption Verification System – A Solution Inspired by Experience
+✨ About the Project
+Earlier this year, I met with an accident and fractured my femur bone, which unfortunately left me unable to appear for my final exams.
+
+During this time, I realized that most colleges don’t have a proper system in place to handle genuine medical cases. This is a serious concern—anyone can face unexpected medical issues, and yet there’s often no streamlined way to apply for and verify medical exemptions.
+
+This experience sparked the idea for this project.
+
+💡 The Motivation
+“There are millions of ideas out there, but ideas mean nothing unless you work on them.”
+
+This project represents the beginning of a bigger vision—to create a platform where students can submit their medical details, and the system can verify documents automatically, making the process smoother and more transparent for all.
+
+It's not complete yet, but it's a working model of what this idea can grow into. I'm proud to share what I’ve built so far.
+
+🛠 Current Features
+✅ Collects student details like name, SAP ID, reason for leave, and prescription
+✅ Extracts the doctor's email from the uploaded prescription
+✅ Sends an automated verification mail to the doctor
+
+there is alot coming in future for this project its just a beginning just stay updated!
+
+
+🧑‍💻 Tech Stack
+Backend: Python (Flask)
+
+Document Parsing: PyMuPDF / OCR
+
+Email System: SMTP
+
+Doctor Verification: Indian Medical Register API (in progress)
+
+Frontend: (Coming soon)
+
+🙌 A Personal Note
+This isn't just code—it's a story, a problem, and a solution all coming together.
+
+I built this to help students like me, who face real problems during medical emergencies but have no official support mechanism.
+
+I’m sharing this publicly, not because it’s complete—but because I believe in sharing progress, not perfection.
+
+🔗 Let’s Connect
+If this idea resonates with you, or you’d like to contribute, feel free to fork, raise issues, or reach out with suggestions.
+LINKEDIN: https://www.linkedin.com/in/nasar-equbal-64111331b/
+
+💙 Thank you for reading.
+
+Real change begins when you turn challenges into action.

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Attendance Exemption</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        .terms-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        .terms-box {
+            background: #222;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .container {
+            display: none;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .form-box {
+            font-weight: bold;
+            max-width: 400px;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='header.jpg') }}" alt="Heading Image" style="width:100%; max-height:200px; object-fit:cover;">
+
+    <!-- Terms overlay -->
+    <div class="terms-overlay" id="termsOverlay">
+        <div class="terms-box">
+            <h2>Terms & Conditions</h2>
+            <p>
+                By proceeding, you confirm that the information and medical prescription uploaded is authentic.
+                False submissions may result in strict disciplinary legal action.
+            </p>
+            <label>
+                <input type="checkbox" id="agreeCheck"> I agree to the terms and conditions
+            </label><br>
+            <button onclick="acceptTerms()">Continue</button>
+        </div>
+    </div>
+
+    <!-- Main form container -->
+    <h2>MEDICAL EXEMPTION REQUEST</h2>
+
+    <div class="container" id="mainContainer">
+        <div class="image-box">
+            <img src="{{ url_for('static', filename='hospital_scene.png') }}" alt="Hospital Scene" width="400">
+        </div>
+        <div class="form-box">
+            <form method="POST" enctype="multipart/form-data">
+                Name: <input type="text" name="name" required><br>
+                SAP ID: <input type="text" name="sap_id" required><br>
+                Reason: <input type="text" name="reason" required><br>
+                Upload Prescription: <input type="file" name="file" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function acceptTerms() {
+            const checkbox = document.getElementById("agreeCheck");
+            if (checkbox.checked) {
+                document.getElementById("termsOverlay").style.display = "none";
+                document.getElementById("mainContainer").style.display = "flex";
+            } else {
+                alert("Please agree to the terms and conditions to continue.");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
