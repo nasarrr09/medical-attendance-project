@@ -1,0 +1,31 @@
+# 🔁 Python cache files
+__pycache__/
+*.pyc
+
+# 🐍 Virtual environments
+venv/
+env/
+
+# 🔒 Sensitive logic or custom scripts
+doctor_email_extractor.py
+extract_prescription_data.py
+config.json
+secrets.txt
+private_logic/
+
+# 🖼 Uploaded or sample files
+uploads/
+*.pdf
+*.docx
+*.jpg
+*.png
+
+# 💻 IDE and OS-specific files
+.DS_Store
+.idea/
+*.log
+*.swp
+
+# 🚫 Flask default environment settings
+instance/
+.env
